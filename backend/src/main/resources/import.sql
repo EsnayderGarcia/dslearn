@@ -14,3 +14,6 @@ INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 2);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 3);
 
 INSERT INTO tb_course (name, img_uri, img_gray_uri) VALUES ('HTML e CSS', 'https://upload.wikimedia.org/wikipedia/commons/1/10/CSS3_and_HTML5_logos_and_wordmarks.svg', 'https://upload.wikimedia.org/wikipedia/commons/5/56/Html_and_css.png');
+
+INSERT INTO tb_offer (editon, start_moment, end_moment, course_id) VALUES ('1.0', TIMESTAMP WITH TIME ZONE '2022-12-29T03:00:00Z', TIMESTAMP WITH TIME ZONE '2023-12-29T03:00:00Z', 1);
+INSERT INTO tb_offer (editon, start_moment, end_moment, course_id) VALUES ('2.0', TIMESTAMP WITH TIME ZONE '2023-02-10T03:00:00Z', TIMESTAMP WITH TIME ZONE '2024-02-10T03:00:00Z', 1);
