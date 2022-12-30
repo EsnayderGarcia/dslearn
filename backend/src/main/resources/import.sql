@@ -17,3 +17,11 @@ INSERT INTO tb_course (name, img_uri, img_gray_uri) VALUES ('HTML e CSS', 'https
 
 INSERT INTO tb_offer (editon, start_moment, end_moment, course_id) VALUES ('1.0', TIMESTAMP WITH TIME ZONE '2022-12-29T03:00:00Z', TIMESTAMP WITH TIME ZONE '2023-12-29T03:00:00Z', 1);
 INSERT INTO tb_offer (editon, start_moment, end_moment, course_id) VALUES ('2.0', TIMESTAMP WITH TIME ZONE '2023-02-10T03:00:00Z', TIMESTAMP WITH TIME ZONE '2024-02-10T03:00:00Z', 1);
+
+
+INSERT INTO tb_resource (title, description, position, img_uri, type, offer_id) VALUES ('Trilha HTML e CSS', 'Trilha principal em HTML e CSS', 1, 'https://upload.wikimedia.org/wikipedia/commons/1/10/CSS3_and_HTML5_logos_and_wordmarks.svg', 1, 1);
+INSERT INTO tb_resource (title, description, position, img_uri, type, offer_id) VALUES ('Fórum', 'Forúm para tirar suas dúvidas', 2, 'https://upload.wikimedia.org/wikipedia/commons/1/10/CSS3_and_HTML5_logos_and_wordmarks.svg', 2, 1);
+INSERT INTO tb_resource (title, description, position, img_uri, type, offer_id) VALUES ('Lives', 'Lives exclusivas para a turma', 3, 'https://upload.wikimedia.org/wikipedia/commons/1/10/CSS3_and_HTML5_logos_and_wordmarks.svg', 0, 1);
+
+  
+  
