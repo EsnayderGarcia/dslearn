@@ -11,7 +11,7 @@ INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 1);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 2);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 1);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 2);
-INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 3);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 3); 
 
 INSERT INTO tb_course (name, img_uri, img_gray_uri) VALUES ('HTML e CSS', 'https://upload.wikimedia.org/wikipedia/commons/1/10/CSS3_and_HTML5_logos_and_wordmarks.svg', 'https://upload.wikimedia.org/wikipedia/commons/5/56/Html_and_css.png');
 
@@ -27,3 +27,5 @@ INSERT INTO tb_section (title, description, position, img_uri, prerequisite_id, 
 INSERT INTO tb_section (title, description, position, img_uri, prerequisite_id, resource_id) VALUES ('Capítulo 2', 'Neste capítulo vamos continuar', 2, 'https://upload.wikimedia.org/wikipedia/commons/1/10/CSS3_and_HTML5_logos_and_wordmarks.svg', 1, 1);
 INSERT INTO tb_section (title, description, position, img_uri, prerequisite_id, resource_id) VALUES ('Capítulo 3', 'Neste capítulo vamos Encerrar', 3, 'https://upload.wikimedia.org/wikipedia/commons/1/10/CSS3_and_HTML5_logos_and_wordmarks.svg', 2, 1);
   
+INSERT INTO tb_enrollment (enroll_moment, refund_moment, available, only_update, offer_id, user_id) VALUES (TIMESTAMP WITH TIME ZONE '2022-12-15T13:30:00Z', null, true, false, 1, 1);
+INSERT INTO tb_enrollment (enroll_moment, refund_moment, available, only_update, offer_id, user_id) VALUES (TIMESTAMP WITH TIME ZONE '2022-12-18T16:00:00Z', null, true, false, 1, 2);
