@@ -23,5 +23,7 @@ INSERT INTO tb_resource (title, description, position, img_uri, type, offer_id) 
 INSERT INTO tb_resource (title, description, position, img_uri, type, offer_id) VALUES ('Fórum', 'Forúm para tirar suas dúvidas', 2, 'https://upload.wikimedia.org/wikipedia/commons/1/10/CSS3_and_HTML5_logos_and_wordmarks.svg', 2, 1);
 INSERT INTO tb_resource (title, description, position, img_uri, type, offer_id) VALUES ('Lives', 'Lives exclusivas para a turma', 3, 'https://upload.wikimedia.org/wikipedia/commons/1/10/CSS3_and_HTML5_logos_and_wordmarks.svg', 0, 1);
 
-  
+INSERT INTO tb_section (title, description, position, img_uri, prerequisite_id, resource_id) VALUES ('Capítulo 1', 'Neste capítulo vamos começar', 1, 'https://upload.wikimedia.org/wikipedia/commons/1/10/CSS3_and_HTML5_logos_and_wordmarks.svg', null, 1);
+INSERT INTO tb_section (title, description, position, img_uri, prerequisite_id, resource_id) VALUES ('Capítulo 2', 'Neste capítulo vamos continuar', 2, 'https://upload.wikimedia.org/wikipedia/commons/1/10/CSS3_and_HTML5_logos_and_wordmarks.svg', 1, 1);
+INSERT INTO tb_section (title, description, position, img_uri, prerequisite_id, resource_id) VALUES ('Capítulo 3', 'Neste capítulo vamos Encerrar', 3, 'https://upload.wikimedia.org/wikipedia/commons/1/10/CSS3_and_HTML5_logos_and_wordmarks.svg', 2, 1);
   
