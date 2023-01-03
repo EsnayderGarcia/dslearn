@@ -29,3 +29,38 @@ INSERT INTO tb_section (title, description, position, img_uri, prerequisite_id, 
   
 INSERT INTO tb_enrollment (enroll_moment, refund_moment, available, only_update, offer_id, user_id) VALUES (TIMESTAMP WITH TIME ZONE '2022-12-15T13:30:00Z', null, true, false, 1, 1);
 INSERT INTO tb_enrollment (enroll_moment, refund_moment, available, only_update, offer_id, user_id) VALUES (TIMESTAMP WITH TIME ZONE '2022-12-18T16:00:00Z', null, true, false, 1, 2);
+
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Aula 1 do Capítulo 1', 1, 1);
+INSERT INTO tb_content (id, text_content, video_uri) VALUES (1, 'Material de Apoio da Aula 1', 'https://i.ytimg.com/an_webp/D4frmIHAxEY/mqdefault_6s.webp?du=3000&sqp=CPLi0J0G&rs=AOn4CLDoPzbd0CWRLV0zLBQDTwsd6sdvsw');
+
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Aula 2 do Capítulo 1', 2, 1);
+INSERT INTO tb_content (id, text_content, video_uri) VALUES (2, 'Material de Apoio do Aula 2', 'https://i.ytimg.com/an_webp/D4frmIHAxEY/mqdefault_6s.webp?du=3000&sqp=CPLi0J0G&rs=AOn4CLDoPzbd0CWRLV0zLBQDTwsd6sdvsw');
+
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Aula 1 do Capítulo 1', 3, 1);
+INSERT INTO tb_content (id, text_content, video_uri) VALUES (3, 'Material de Apoio do Aula 3', 'https://i.ytimg.com/an_webp/D4frmIHAxEY/mqdefault_6s.webp?du=3000&sqp=CPLi0J0G&rs=AOn4CLDoPzbd0CWRLV0zLBQDTwsd6sdvsw');
+
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Tarefa 1 do Capítulo 1', 4, 1);
+INSERT INTO tb_task (id, description, approval_count, question_count, weight, due_date) VALUES (4, 'Fazer a tarefa 1', 5, 4, 1.0, TIMESTAMP WITH TIME ZONE '2023-01-06T21:00:00Z');
+
+INSERT INTO tb_lessons_done (lesson_id, user_id, offer_id) VALUES (1, 1, 1);
+INSERT INTO tb_lessons_done (lesson_id, user_id, offer_id) VALUES (2, 1, 1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

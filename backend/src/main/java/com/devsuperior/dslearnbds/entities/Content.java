@@ -11,15 +11,15 @@ public class Content extends Lesson {
 	
 	private String textContent;
 	
-	private String videoUr;
+	private String videoUri;
 	
 	public Content() {
 	}
 
-	public Content(Long id, String title, Integer position, Section section, String textContent, String videoUr) {
+	public Content(Long id, String title, Integer position, Section section, String textContent, String videoUri) {
 		super(id, title, position, section);
 		this.textContent = textContent;
-		this.videoUr = videoUr;
+		this.videoUri = videoUri;
 	}
 
 	public String getTextContent() {
@@ -30,12 +30,12 @@ public class Content extends Lesson {
 		this.textContent = textContent;
 	}
 
-	public String getVideoUr() {
-		return videoUr;
+	public String getvideoUri() {
+		return videoUri;
 	}
 
-	public void setVideoUr(String videoUr) {
-		this.videoUr = videoUr;
+	public void setvideoUri(String videoUri) {
+		this.videoUri = videoUri;
 	}
 	
 }
