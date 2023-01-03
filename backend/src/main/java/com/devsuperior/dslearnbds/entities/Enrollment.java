@@ -2,13 +2,16 @@ package com.devsuperior.dslearnbds.entities;
 
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.devsuperior.dslearnbds.entities.pk.EnrollmentPK;
@@ -18,7 +21,7 @@ import com.devsuperior.dslearnbds.entities.pk.EnrollmentPK;
 public class Enrollment implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+		
 	@EmbeddedId
 	private EnrollmentPK id;
 	
@@ -34,6 +37,9 @@ public class Enrollment implements Serializable {
 	
 	@ManyToMany(mappedBy = "enrollmentsDone")
 	private Set<Lesson> lessonsDone = new HashSet<>();
+	
+	@OneToMany(mappedBy = "enrollment")
+	private List<Deliver> delivers = new ArrayList<>();
 	
 	public Enrollment() {
 	}
@@ -101,6 +107,10 @@ public class Enrollment implements Serializable {
 	
 	public Set<Lesson> getLessonsDone() {
 		return lessonsDone;
+	}
+	
+	public List<Deliver> getDelivers() {
+		return delivers;
 	}
 	
 }
