@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: ${APP_PROFILE:test}
+  jpa:
+    open-in-view: false
+    show-sql: true
+
+security:
+  oauth2:
+    client:
+      client-id: ${client_id:dslearn}
+      client-secret: ${client_secret:dslearn123}
+
+variables:
+  jwt-secret: ${jwt_secret:MY-JWT-SECRET}
+  jwt-duration: ${jwt_duration:86400}
