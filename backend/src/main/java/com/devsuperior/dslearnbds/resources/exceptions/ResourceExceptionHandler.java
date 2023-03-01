@@ -1,17 +1,17 @@
 package com.devsuperior.dslearnbds.resources.exceptions;
 
-import java.time.LocalDateTime;
-
-import javax.servlet.http.HttpServletRequest;
-
 import com.devsuperior.dslearnbds.services.exceptions.DataBaseException;
+import com.devsuperior.dslearnbds.services.exceptions.ForbiddenException;
 import com.devsuperior.dslearnbds.services.exceptions.ResourceNotFoundException;
+import com.devsuperior.dslearnbds.services.exceptions.UnauthorizedException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+import javax.servlet.http.HttpServletRequest;
+import java.time.LocalDateTime;
 
 @ControllerAdvice
 public class ResourceExceptionHandler {
@@ -27,7 +27,7 @@ public class ResourceExceptionHandler {
 		error.setError(ex.getMessage());
 		error.setPath(req.getRequestURI());
 		
-		return new ResponseEntity<StandardError>(error, HttpStatus.NOT_FOUND);
+		return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
 	}
 	
 	@ExceptionHandler(DataBaseException.class)
@@ -59,6 +59,18 @@ public class ResourceExceptionHandler {
 			.forEach(f -> error.addError(new FieldMessage(f.getField(), f.getDefaultMessage())));
 		
 		return ResponseEntity.unprocessableEntity().body(error);
+	}
+
+	@ExceptionHandler(ForbiddenException.class)
+	public ResponseEntity<OauthCustomError> forbbidenException(ForbiddenException ex, HttpServletRequest req) {
+		OauthCustomError error = new OauthCustomError("Forbidden", ex.getMessage());
+		return ResponseEntity.status(HttpStatus.FORBIDDEN).body(error);
+	}
+
+	@ExceptionHandler(UnauthorizedException.class)
+	public ResponseEntity<OauthCustomError> UnauthorizedException(UnauthorizedException ex, HttpServletRequest req) {
+		OauthCustomError error = new OauthCustomError("Unauthorized", ex.getMessage());
+		return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(error);
 	}
 }
 
