@@ -106,6 +106,11 @@ public class User implements UserDetails, Serializable {
 		return true;
 	}
 
+	public boolean hasRole(String roleName) {
+		return roles.stream()
+				.anyMatch(role -> role.getAuthority().equalsIgnoreCase(roleName));
+	}
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
