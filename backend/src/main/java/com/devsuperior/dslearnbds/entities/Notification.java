@@ -1,5 +1,7 @@
 package com.devsuperior.dslearnbds.entities;
 
+import com.devsuperior.dslearnbds.DTOs.NotificationDTO;
+
 import java.io.Serializable;
 import java.time.Instant;
 import java.util.Objects;
@@ -47,6 +49,14 @@ public class Notification implements Serializable {
 		this.read = read;
 		this.route = route;
 		this.user = user;
+	}
+
+	public Notification(NotificationDTO notificationDTO) {
+		this.id = notificationDTO.getId();
+		this.text = notificationDTO.getText();
+		this.moment = notificationDTO.getMoment();
+		this.read = notificationDTO.isRead();
+		this.route = notificationDTO.getRoute();
 	}
 
 	public Long getId() {
